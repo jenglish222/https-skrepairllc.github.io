@@ -1,0 +1,54 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:'Open Sans', sans-serif; line-height:1.6; color:#fff; background:#121212; scroll-behavior:smooth;}
+a {text-decoration:none; color:inherit;}
+img {max-width:100%; border-radius:10px; display:block;}
+
+/* Navigation */
+nav {position:fixed; top:0; left:0; background:#1a1a1a; padding:15px 20px; z-index:999; border-radius:0 8px 8px 0;}
+nav h2 {font-family:'Montserrat', sans-serif; font-size:1.5em; color:#ff6b00; margin-bottom:10px; cursor:pointer;}
+nav ul {list-style:none; display:none; margin-top:10px; padding-left:0;}
+nav ul li {margin:10px 0;}
+nav ul li a {color:#fff; font-weight:bold; transition:0.3s;}
+nav ul li a:hover {color:#ff6b00;}
+
+/* Hero Section */
+header {background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1605902711622-cfb43c44301c?crop=entropy&cs=tinysrgb&fit=max&w=1950&q=80') center/cover no-repeat; height:90vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px;}
+header h1 {font-family:'Montserrat', sans-serif; font-size:4em; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.7);}
+header p {font-size:1.5em; margin-bottom:30px; text-shadow:1px 1px 6px rgba(0,0,0,0.7);}
+.cta-btn {padding:20px 50px; background:#ff6b00; color:white; font-weight:bold; border-radius:8px; transition:0.3s;}
+.cta-btn:hover {background:#ff4500;}
+
+section {padding:80px 20px; max-width:1200px; margin:auto;}
+h2 {font-family:'Montserrat', sans-serif; font-size:2.5em; color:#ff6b00; text-align:center; margin-bottom:30px;}
+p {font-size:1.1em; max-width:800px; margin:20px auto; color:#ddd; text-align:center;}
+
+/* Services */
+.service {display:flex; flex-wrap:wrap; margin-bottom:60px; align-items:center; gap:20px;}
+.service img {flex:1 1 400px; max-height:300px; object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.4);}
+.service .service-text {flex:1 1 400px;}
+.service h3 {font-family:'Montserrat', sans-serif; font-size:2em; color:#ff6b00; margin-bottom:15px;}
+.service p {font-size:1em; line-height:1.8;}
+
+/* About, Certifications, Contact */
+#about, #certifications, #contact {border-radius:10px; box-shadow:0 8px 25px rgba(0,0,0,0.5); padding:60px 20px; margin-bottom:60px;}
+#about p, #certifications p, #contact p {color:#ddd; max-width:1000px; margin:auto; text-align:left;}
+
+#certifications {background:#1a1a1a; text-align:center;}
+#certifications ul {list-style:none; padding:0; max-width:700px; margin:20px auto;}
+#certifications li {font-size:1.2em; margin:15px 0; color:#ff6b00; font-weight:bold;}
+#certifications p {margin-top:20px;}
+
+#contact {background:#2a2a2a;}
+.contact-section {display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between; padding:40px 0;}
+.contact-info {flex:1; min-width:280px; color:#fff;}
+.contact-info p {margin-bottom:15px; font-size:1.1em;}
+.contact-form {flex:1; min-width:280px;}
+.contact-form input, .contact-form textarea {width:100%; padding:15px; margin-bottom:15px; border-radius:6px; border:none; font-size:1em;}
+.contact-form button {padding:15px 30px; background:#ff6b00; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer; transition:0.3s;}
+.contact-form button:hover {background:#ff4500;}
+.contact-form p {font-size:0.85em; color:#ccc; margin-top:10px;}
+
+footer {text-align:center; padding:25px; background:#111; font-size:0.95em; color:#888;}
+
+@media(max-width:900px){.service{flex-direction:column;}}
+@media(max-width:600px){header h1{font-size:2.5em;} header p{font-size:1.2em;}}
