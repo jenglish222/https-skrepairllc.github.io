@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S&K Appliance Repair – Customer Testimonials</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h2 onclick="toggleMenu()">☰ Menu</h2>
+  <ul id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="reviews.html">Testimonials</a></li>
+  </ul>
+</nav>
+
+<section id="testimonials">
+  <h2>Customer Testimonials</h2>
+  <p class="subtitle">Proudly serving Mobile, Daphne & surrounding areas</p>
+
+  <div class="testimonial">
+    <div class="stars">★★★★★</div>
+    <p>"Very professional and honest service. My refrigerator was repaired the same day. Highly recommend S&K!"</p>
+    <span>– Amanda T., Mobile, AL</span>
+  </div>
+
+  <div class="testimonial">
+    <div class="stars">★★★★★</div>
+    <p>"They showed up on time and fixed my dryer quickly. Fair pricing and great communication."</p>
+    <span>– Jason M., Daphne, AL</span>
+  </div>
+
+  <div class="testimonial">
+    <div class="stars">★★★★★</div>
+    <p>"Excellent experience from start to finish. Very knowledgeable technician."</p>
+    <span>– Rachel P., Spanish Fort, AL</span>
+  </div>
+
+  <div class="testimonial">
+    <div class="stars">★★★★★</div>
+    <p>"Called in the morning and had my oven working by the afternoon. Outstanding service."</p>
+    <span>– Brian L., Mobile, AL</span>
+  </div>
+
+  <div class="testimonial">
+    <div class="stars">★★★★★</div>
+    <p>"Fast, reliable, and affordable. Will definitely use again."</p>
+    <span>– Chris D., Daphne, AL</span>
+  </div>
+
+  <div class="testimonial">
+    <div class="stars">★★★★★</div>
+    <p>"Very respectful and explained everything clearly. Washer works perfectly now."</p>
+    <span>– Nicole S., Fairhope, AL</span>
+  </div>
+
+  <div class="testimonial">
+    <div class="stars">★★★★★</div>
+    <p>"Great service and very professional."</p>
+    <span>– Kevin R., Mobile, AL</span>
+  </div>
+
+  <div class="testimonial">
+    <div class="stars">★★★★★</div>
+    <p>"Reliable and honest. Highly recommended."</p>
+    <span>– Maria G., Daphne, AL</span>
+  </div>
+
+  <!-- Review Submission -->
+  <div class="review-submit">
+    <h3>Leave Us a Review</h3>
+    <p>We value your feedback. Submit your experience below.</p>
+
+    <form action="https://formspree.io/f/YOUR-FORMSPREE-ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="location" placeholder="City, State" required>
+      <textarea name="message" rows="5" placeholder="Share your experience" required></textarea>
+      <button type="submit">Submit Testimonial</button>
+    </form>
+
+    <div class="google-review">
+      <p>Prefer Google?</p>
+      <a href="#" class="cta-btn">Leave a Google Review</a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  &copy; 2026 S&K Appliance Repair. Serving Mobile, Daphne & Surrounding Areas.
+</footer>
+
+<script>
+function toggleMenu(){
+  const menu = document.getElementById('menu');
+  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
