@@ -2,204 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>S&K Appliance Repair – Mobile & Daphne, AL</title>
-  <meta name="description" content="S&K Appliance Repair provides fast, professional repair services for all home appliances in Mobile, Daphne, AL, and surrounding areas. Call 251-307-4572.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     * {margin:0; padding:0; box-sizing:border-box;}
-    body {font-family:'Open Sans', sans-serif; line-height:1.6; color:#fff; background:#121212; scroll-behavior:smooth;}
-    a {text-decoration:none; color:inherit;}
-    img {max-width:100%; border-radius:10px; display:block; object-fit:cover;}
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      background:#1a1a1a;
-      padding:15px 20px;
-      z-index:999;
-      border-radius:0 8px 8px 0;
-    }
-    nav h2 {font-family:'Montserrat', sans-serif; font-size:1.5em; color:#ff6b00; margin-bottom:10px; cursor:pointer;}
-    nav ul {list-style:none; display:none; margin-top:10px; padding-left:0;}
-    nav ul li {margin:10px 0;}
-    nav ul li a {color:#fff; font-weight:bold; transition:0.3s;}
-    nav ul li a:hover {color:#ff6b00;}
+    body {font-family:'Open Sans', sans-serif; background:#121212; color:#fff; line-height:1.6;}
+    img {max-width:100%; border-radius:12px; display:block; object-fit:cover;}
 
     header {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero.jpg') center/cover no-repeat;
-      background-color: #121212;
-      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+      url('images/hero.jpg') center/cover no-repeat;
+      height:85vh;
       display:flex;
       flex-direction:column;
       justify-content:center;
       align-items:center;
       text-align:center;
-      padding:0 20px;
+      padding:20px;
     }
-    header h1 {font-family:'Montserrat', sans-serif; font-size:4em; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.7);}
-    header p {font-size:1.5em; margin-bottom:30px; text-shadow:1px 1px 6px rgba(0,0,0,0.7);}
-    .cta-btn {padding:20px 50px; background:#ff6b00; color:white; font-weight:bold; border-radius:8px; transition:0.3s;}
-    .cta-btn:hover {background:#ff4500;}
+
+    header h1 {
+      font-family:'Montserrat', sans-serif;
+      font-size:4.5rem;
+      font-weight:800;
+      margin-bottom:20px;
+      color:#ff6b00;
+    }
+
+    header p {
+      font-size:1.6rem;
+      margin-bottom:30px;
+    }
+
+    .cta-btn {
+      padding:18px 45px;
+      background:#ff6b00;
+      color:#fff;
+      font-weight:bold;
+      border-radius:8px;
+      font-size:1.2rem;
+    }
 
     section {padding:80px 20px; max-width:1200px; margin:auto;}
-    h2 {font-family:'Montserrat', sans-serif; font-size:2.5em; color:#ff6b00; text-align:center; margin-bottom:30px;}
-    p {font-size:1.1em; max-width:800px; margin:20px auto; color:#ddd; text-align:center;}
+    h2 {
+      font-family:'Montserrat', sans-serif;
+      font-size:3rem;
+      text-align:center;
+      color:#ff6b00;
+      margin-bottom:60px;
+    }
 
-    .service {display:flex; flex-wrap:wrap; margin-bottom:60px; align-items:center; gap:20px;}
-    .service img {flex:1 1 400px; max-height:300px; box-shadow:0 8px 20px rgba(0,0,0,0.4);}
-    .service .service-text {flex:1 1 400px;}
-    .service h3 {font-family:'Montserrat', sans-serif; font-size:2em; color:#ff6b00; margin-bottom:15px;}
-    .service p {font-size:1em; line-height:1.8;}
+    .service {
+      display:flex;
+      flex-wrap:wrap;
+      gap:40px;
+      align-items:center;
+      margin-bottom:80px;
+    }
 
-    #about, #certifications, #contact {border-radius:10px; box-shadow:0 8px 25px rgba(0,0,0,0.5); padding:60px 20px; margin-bottom:60px;}
-    #about {background:#1f1f1f;}
-    #about p, #certifications p, #contact p {color:#ddd; max-width:1000px; margin:auto; text-align:left;}
+    .service img {
+      flex:1 1 450px;
+      max-height:350px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.5);
+    }
 
-    #certifications {background:#1a1a1a; text-align:center;}
-    #certifications ul {list-style:none; padding:0; max-width:700px; margin:20px auto;}
-    #certifications li {font-size:1.2em; margin:15px 0; color:#ff6b00; font-weight:bold;}
-    #certifications p {margin-top:20px;}
+    .service-text {
+      flex:1 1 450px;
+    }
 
-    #contact {background:#2a2a2a;}
-    .contact-section {display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between; padding:40px 0;}
-    .contact-info {flex:1; min-width:280px; color:#fff;}
-    .contact-info p {margin-bottom:15px; font-size:1.1em;}
-    .contact-form {flex:1; min-width:280px;}
-    .contact-form input, .contact-form textarea {width:100%; padding:15px; margin-bottom:15px; border-radius:6px; border:none; font-size:1em;}
-    .contact-form button {padding:15px 30px; background:#ff6b00; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer; transition:0.3s;}
-    .contact-form button:hover {background:#ff4500;}
-    .contact-form p {font-size:0.85em; color:#ccc; margin-top:10px;}
+    /* 🔥 BIGGER SERVICE TITLES */
+    .service-text h3 {
+      font-family:'Montserrat', sans-serif;
+      font-size:2.8rem;
+      margin-bottom:20px;
+      color:#ff6b00;
+    }
 
-    footer {text-align:center; padding:25px; background:#111; font-size:0.95em; color:#888;}
+    /* 🔥 BIGGER DESCRIPTION TEXT */
+    .service-text p {
+      font-size:1.35rem;
+      line-height:1.8;
+      color:#e0e0e0;
+    }
 
-    @media(max-width:900px){.service{flex-direction:column;}}
-    @media(max-width:600px){header h1{font-size:2.5em;} header p{font-size:1.2em;}}
+    footer {
+      background:#111;
+      padding:30px;
+      text-align:center;
+      color:#aaa;
+    }
+
+    @media(max-width:900px){
+      .service {flex-direction:column;}
+      header h1 {font-size:3rem;}
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <h2 onclick="toggleMenu()">☰ Menu</h2>
-    <ul id="menu">
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </nav>
+<header>
+  <h1>S&K Appliance Repair</h1>
+  <p>Serving Mobile, Daphne & surrounding areas – Fast, Reliable Appliance Repairs</p>
+  <a href="tel:+12513074572" class="cta-btn">Call Now: 251-307-4572</a>
+</header>
 
-  <!-- Hero Section -->
-  <header>
-    <h1>S&K Appliance Repair</h1>
-    <p>Serving Mobile, Daphne & surrounding areas – Fast, Reliable Appliance Repairs</p>
-    <a href="tel:+12513074572" class="cta-btn">Call Now: 251-307-4572</a>
-  </header>
+<section>
+  <h2>Our Services</h2>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-
-    <div class="service">
-      <img src="images/washer.jpg" alt="Washer Repair">
-      <div class="service-text">
-        <h3>Washer Repair</h3>
-        <p>Reliable washer repair to keep your laundry running smoothly. We fix all brands and models efficiently.</p>
-      </div>
+  <div class="service">
+    <img src="images/washer.jpg" alt="Washer Repair">
+    <div class="service-text">
+      <h3>Washer Repair</h3>
+      <p>Reliable washer repair to keep your laundry running smoothly. We fix all brands and models efficiently and professionally.</p>
     </div>
+  </div>
 
-    <div class="service">
-      <img src="images/oven.jpg" alt="Oven & Stove Repair">
-      <div class="service-text">
-        <h3>Oven & Stove Repair</h3>
-        <p>Professional oven and stove repair services. We ensure your kitchen appliances are safe and fully functional.</p>
-      </div>
+  <div class="service">
+    <img src="images/oven.jpg" alt="Oven Repair">
+    <div class="service-text">
+      <h3>Oven & Stove Repair</h3>
+      <p>Professional oven and stove repair services to ensure your kitchen appliances operate safely and efficiently.</p>
     </div>
+  </div>
 
-    <div class="service">
-      <img src="images/refrigerator.jpg" alt="Refrigerator Repair">
-      <div class="service-text">
-        <h3>Refrigerator Repair</h3>
-        <p>Keep your food fresh with our expert refrigerator repair services. Fast, reliable, and affordable.</p>
-      </div>
+  <div class="service">
+    <img src="images/refrigerator.jpg" alt="Refrigerator Repair">
+    <div class="service-text">
+      <h3>Refrigerator Repair</h3>
+      <p>Keep your food fresh with fast and dependable refrigerator repair. We handle cooling issues, leaks, and more.</p>
     </div>
+  </div>
 
-    <div class="service">
-      <img src="images/dryer.jpg" alt="Dryer Repair">
-      <div class="service-text">
-        <h3>Dryer Repair</h3>
-        <p>Efficient dryer repair to prevent clothes from taking too long to dry. We handle all brands and types.</p>
-      </div>
+  <div class="service">
+    <img src="images/dryer.jpg" alt="Dryer Repair">
+    <div class="service-text">
+      <h3>Dryer Repair</h3>
+      <p>Efficient dryer repair to restore proper heating and performance so your clothes dry quickly and safely.</p>
     </div>
+  </div>
 
-    <div class="service">
-      <img src="images/dishwasher.jpg" alt="Dishwasher Repair">
-      <div class="service-text">
-        <h3>Dishwasher Repair</h3>
-        <p>Quick dishwasher repairs to keep your kitchen running smoothly. Our goal is your convenience and satisfaction.</p>
-      </div>
+  <div class="service">
+    <img src="images/dishwasher.jpg" alt="Dishwasher Repair">
+    <div class="service-text">
+      <h3>Dishwasher Repair</h3>
+      <p>Quick dishwasher repairs to eliminate drainage problems, leaks, and poor cleaning performance.</p>
     </div>
-  </section>
+  </div>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>At S&K Appliance Repair, our mission is simple: to provide fast, reliable, and affordable appliance repair to homes in Mobile, Daphne, AL and surrounding areas. We take pride in delivering professional service with integrity, ensuring every customer’s appliances work efficiently and safely. Our goal is to make appliance breakdowns stress-free for every household, one repair at a time.</p>
-  </section>
+</section>
 
-  <!-- Certifications Section -->
-  <section id="certifications">
-    <h2>Certifications & Training</h2>
-    <ul>
-      <li>✅ GE Certified Appliance Technician</li>
-      <li>✅ EPA Certified Refrigerant Handling</li>
-      <li>✅ Manufacturer-Specific Appliance Training</li>
-      <li>✅ Electrical Safety & Appliance Repair Certification</li>
-      <li>✅ Licensed & Insured Technician</li>
-    </ul>
-    <p>Our team has the skills, certifications, and training to handle all your appliance repairs safely and efficiently.</p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-section">
-      <div class="contact-info">
-        <p><strong>Phone:</strong> <a href="tel:+12513074572">251-307-4572</a></p>
-        <p><strong>Email:</strong> <a href="mailto:sandkrepairllc@gmail.com">sandkrepairllc@gmail.com</a></p>
-      </div>
-      <div class="contact-form">
-        <form action="https://formspree.io/f/xqedydzd" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="_replyto" placeholder="Your Email" required>
-          <textarea name="message" rows="5" placeholder="Describe the issue" required></textarea>
-          <input type="hidden" name="_next" value="thank-you.html">
-          <button type="submit">Send Message</button>
-        </form>
-        <p>Your message will be sent directly to us — no email client needed.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2026 S&K Appliance Repair. Serving Mobile, Daphne & Surrounding Areas. All rights reserved.
-  </footer>
-
-  <script>
-    function toggleMenu(){
-      const menu = document.getElementById('menu');
-      if(menu.style.display === 'block'){
-        menu.style.display = 'none';
-      } else {
-        menu.style.display = 'block';
-      }
-    }
-  </script>
+<footer>
+  © 2026 S&K Appliance Repair – Serving Mobile & Daphne, AL
+</footer>
 
 </body>
 </html>
