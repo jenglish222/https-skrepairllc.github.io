@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>S&K Appliance Repair – Customer Testimonials</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,74 +21,64 @@
   </ul>
 </nav>
 
-<section id="testimonials">
-  <h2>Customer Testimonials</h2>
-  <p class="subtitle">Proudly serving Mobile, Daphne & surrounding areas</p>
+<section class="reviews-section">
 
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <p>"Very professional and honest service. My refrigerator was repaired the same day. Highly recommend S&K!"</p>
-    <span>– Amanda T., Mobile, AL</span>
+  <h2>What Our Customers Say</h2>
+  <p class="subtitle">Serving Mobile, Daphne & surrounding areas</p>
+
+  <!-- Slider -->
+  <div class="slider">
+    <div class="slides">
+
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <p>"Very professional and honest service. My refrigerator was repaired the same day."</p>
+        <span>– Amanda T., Mobile, AL</span>
+      </div>
+
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <p>"Fast, affordable and extremely knowledgeable technician."</p>
+        <span>– Jason M., Daphne, AL</span>
+      </div>
+
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <p>"Called in the morning and had my oven working by afternoon. Outstanding work."</p>
+        <span>– Rachel P., Spanish Fort, AL</span>
+      </div>
+
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <p>"Reliable and respectful. Washer works perfectly now."</p>
+        <span>– Nicole S., Fairhope, AL</span>
+      </div>
+
+    </div>
   </div>
 
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <p>"They showed up on time and fixed my dryer quickly. Fair pricing and great communication."</p>
-    <span>– Jason M., Daphne, AL</span>
+  <!-- Google Reviews Auto Sync Section -->
+  <div class="google-sync">
+    <h3>Google Reviews</h3>
+    <p>See our verified Google customer feedback below:</p>
+
+    <!-- PASTE GOOGLE WIDGET CODE BELOW THIS LINE -->
+    <div id="google-review-widget">
+      <!-- Widget code from Elfsight or SociableKIT goes here -->
+    </div>
+
   </div>
 
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <p>"Excellent experience from start to finish. Very knowledgeable technician."</p>
-    <span>– Rachel P., Spanish Fort, AL</span>
-  </div>
-
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <p>"Called in the morning and had my oven working by the afternoon. Outstanding service."</p>
-    <span>– Brian L., Mobile, AL</span>
-  </div>
-
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <p>"Fast, reliable, and affordable. Will definitely use again."</p>
-    <span>– Chris D., Daphne, AL</span>
-  </div>
-
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <p>"Very respectful and explained everything clearly. Washer works perfectly now."</p>
-    <span>– Nicole S., Fairhope, AL</span>
-  </div>
-
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <p>"Great service and very professional."</p>
-    <span>– Kevin R., Mobile, AL</span>
-  </div>
-
-  <div class="testimonial">
-    <div class="stars">★★★★★</div>
-    <p>"Reliable and honest. Highly recommended."</p>
-    <span>– Maria G., Daphne, AL</span>
-  </div>
-
-  <!-- Review Submission -->
+  <!-- Submit Review -->
   <div class="review-submit">
-    <h3>Leave Us a Review</h3>
-    <p>We value your feedback. Submit your experience below.</p>
+    <h3>Leave a Testimonial</h3>
 
     <form action="https://formspree.io/f/YOUR-FORMSPREE-ID" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="text" name="location" placeholder="City, State" required>
       <textarea name="message" rows="5" placeholder="Share your experience" required></textarea>
-      <button type="submit">Submit Testimonial</button>
+      <button type="submit">Submit Review</button>
     </form>
-
-    <div class="google-review">
-      <p>Prefer Google?</p>
-      <a href="#" class="cta-btn">Leave a Google Review</a>
-    </div>
 
   </div>
 
@@ -103,6 +93,16 @@ function toggleMenu(){
   const menu = document.getElementById('menu');
   menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
 }
+
+// Auto sliding animation
+let index = 0;
+const slides = document.querySelector('.slides');
+const totalSlides = document.querySelectorAll('.slide').length;
+
+setInterval(() => {
+  index = (index + 1) % totalSlides;
+  slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+}, 5000);
 </script>
 
 </body>
